@@ -50,6 +50,33 @@ export const routes: Routes = [
                 exposedModule: './ProductsPage',
         }).then(m => m.ProductsPage),
     },
+  {
+    path: 'orders',
+    loadComponent: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4203/remoteEntry.js',
+        exposedModule: './OrdersPage',
+      }).then(m => m.OrdersPage),
+  },
+  {
+    path: 'courses',
+    loadComponent: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4204/remoteEntry.js',
+        exposedModule: './CoursesPage',
+      }).then(m => m.CoursesPage),
+  },
+  {
+    path: 'books',
+    loadComponent: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4205/remoteEntry.js',
+        exposedModule: './BooksPage',
+      }).then(m => m.BooksPage),
+  },
 
   /**
    * Ruta comodín.
