@@ -1,5 +1,14 @@
 import { Course } from "../interfaces/courses.interface";
 
+/**
+ * Listado de cursos simulados para pruebas y demostración.
+ *
+ * @remarks
+ * Contiene datos ficticios que implementan la interfaz {@link Course}.
+ * Se utiliza principalmente para pruebas unitarias de componentes y servicios.
+ *
+ * @type {Course[]}
+ */
 export const COURSES_MOCK: Course[] = [
     {
       id: 1,
