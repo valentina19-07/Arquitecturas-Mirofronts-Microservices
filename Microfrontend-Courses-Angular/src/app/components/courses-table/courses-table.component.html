@@ -1,0 +1,27 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Titulo</th>
+			<th scope="col">Instructor</th>
+			<th scope="col">Duracion (h)</th>
+			<th scope="col">Nivel</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (course of courses; track course.id) {
+			<tr>
+				<th scope="row">{{ course.id }}</th>
+				<td>{{ course.title }}</td>
+				<td>{{ course.instructor }}</td>
+				<td>{{ course.duration }}</td>
+				<td>
+					<dsb-badge-atom
+						[text]="course.level"
+						[type]="levelMap[course.level]" >
+					</dsb-badge-atom>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
